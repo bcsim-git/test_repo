@@ -49,13 +49,26 @@ pipeline {
             }
         }
 
-        stage('Printing All Global Variables') {
-            steps {
-                sh """
-                env
-                """
-            }
-        }
+        stage('Test') {
+            parallel {
 
+              stage('Printing All Global Variables') {
+                  steps {
+                       sh """
+                       env
+                       """
+                   }
+        }
+              stage('Execute Shell') {
+                  steps {
+                      sh 'echo "hello"'
+                  }
+              }
+              
+                            stage('Print Env varaibles') {
+                  steps {
+                      sh 'echo "Env variables"'
+                  }
+              }
     }   
 }
