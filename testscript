@@ -65,10 +65,10 @@ pipeline {
                   }
               }
               
-                            stage('Print Env varaibles') {
+               stage('Print Env varaibles') {
                   steps {
                       sh 'echo "Env variables"'
                   }
               }
-    
+    }
 }
