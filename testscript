@@ -57,8 +57,9 @@ pipeline {
                        sh """
                        env
                        """
+                     }
                    }
-        }
+               }
               stage('Execute Shell') {
                   steps {
                       sh 'echo "hello"'
@@ -70,6 +71,5 @@ pipeline {
                       sh 'echo "Env variables"'
                   }
               }
-    }
-}
-}
+        }
+   }
