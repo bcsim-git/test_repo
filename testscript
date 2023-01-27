@@ -71,6 +71,7 @@ pipeline {
                       sh 'echo "Env variables"'
                   }
               }
+             }
           }
         }
    }
